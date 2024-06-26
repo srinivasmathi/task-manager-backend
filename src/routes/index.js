@@ -23,4 +23,6 @@ router.get("/api/",(req,res) => {
 
 router.post("/api/create/",createTask.create);
 
+router.get("/api/getall/",getAllTasks.getAll);
+
 module.exports = router;
