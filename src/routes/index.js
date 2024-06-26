@@ -21,8 +21,19 @@ router.get("/api/",(req,res) => {
     })
 });
 
+//route to create a new task
 router.post("/api/create/",createTask.create);
 
+//route to get all the task
 router.get("/api/getall/",getAllTasks.getAll);
+
+//route to get the task by its ID
+router.get("/api/getbyid/:id",findTaskByID.getById);
+
+//route to update a task
+router.post("/api/update/",updateTask.update);
+
+//route to delete a task 
+router.delete("/api/delete/:id",deleteTask.deleteTask);
 
 module.exports = router;
