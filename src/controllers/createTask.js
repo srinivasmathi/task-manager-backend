@@ -3,7 +3,7 @@ const Task = require("../models/tasks");
 
 const create = async (req,res) => {
     try {
-
+        console.log(req.body);
         const newTask = new Task(req.body);
         await newTask.save();
         res.status(201).json(newTask);

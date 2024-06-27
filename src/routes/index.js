@@ -31,7 +31,7 @@ router.get("/api/getall/",getAllTasks.getAll);
 router.get("/api/getbyid/:id",findTaskByID.getById);
 
 //route to update a task
-router.post("/api/update/",updateTask.update);
+router.patch("/api/update/:id",updateTask.update);
 
 //route to delete a task 
 router.delete("/api/delete/:id",deleteTask.deleteTask);

@@ -12,9 +12,7 @@ async function startServer() {
     app.use(express.urlencoded({extended: true}));
 
     //allowing cross orgin request from localhost:3000(frontend)
-    app.use(cors({
-        orgin: "http://localhost:3000",
-    }));
+    app.use(cors());
 
     //establishing a mongodb database connection with the server.
     await connectDB();
